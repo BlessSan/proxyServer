@@ -9,6 +9,11 @@ const HOST = "localhost";
 const API_SERVICE_URL = "https://n7b67.sse.codesandbox.io";
 
 app.use(morgan("dev"));
+
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 app.use(
   "/graphql_proxy",
   createProxyMiddleware({
