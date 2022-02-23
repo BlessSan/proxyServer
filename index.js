@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 
 const PORT = process.env.PORT || 8000;
-const HOST = "localhost";
+const HOST = process.env.HOST || "0.0.0.0";
 const API_SERVICE_URL = "https://n7b67.sse.codesandbox.io";
 
 app.use(morgan("dev"));
